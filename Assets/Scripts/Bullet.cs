@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     public float destroyPosY = 10f;
     public GameObject explosionPrefab;
     private Rigidbody2D rb;
+    public GeneradordeBalas genBalas;
 
     void Awake()
     {
@@ -29,6 +30,12 @@ public class Bullet : MonoBehaviour
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             Destroy(collision.gameObject); 
             Destroy(gameObject);
+            genBalas.SumarPuntos(5);
+
         }
+    }
+    public void SetSpawnBullet(GeneradordeBalas generadordeBalas)
+    {
+        this.genBalas = generadordeBalas;
     }
 }

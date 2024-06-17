@@ -838,8 +838,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10.4, y: -4}
-  m_SizeDelta: {x: 131.089, y: 40.881104}
+  m_AnchoredPosition: {x: 10.400024, y: -4}
+  m_SizeDelta: {x: 185.765, y: 52.5974}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &784965964
 MonoBehaviour:
@@ -1109,6 +1109,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1525413779}
   sonidoDisparo: {fileID: 1525413780}
   bulletSpeed: 10
+  gameManager: {fileID: 1658038487}
 --- !u!4 &1525413779
 Transform:
   m_ObjectHideFlags: 0

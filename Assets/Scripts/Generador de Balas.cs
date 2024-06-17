@@ -9,6 +9,7 @@ public class GeneradordeBalas : MonoBehaviour
     private Rigidbody rbd;
     public AudioSource sonidoDisparo;
     public float bulletSpeed = 10f;
+    public GameManager gameManager;
     void Awake()
     {
     }
@@ -22,7 +23,12 @@ public class GeneradordeBalas : MonoBehaviour
         if (bulletPrefab != null && spawnPoint != null)
         {
             GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
+            bullet.GetComponent<Bullet>().SetSpawnBullet(this);
             sonidoDisparo.Play();
         }
+    }
+    public void SumarPuntos(int addPoints)
+    {
+        gameManager.SumarPuntos(addPoints);
     }
 }

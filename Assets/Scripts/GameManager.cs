@@ -20,7 +20,10 @@ public class GameManager : MonoBehaviour
     public void SumarPuntos(int addPoints)
     {
         points = points + addPoints;
-        textPuntaje.text = "Score: " + points;
+        if(textPuntaje != null)
+        {
+            textPuntaje.text = "Score: " + points;
+        }       
     }
     public void Jugar()
     {
